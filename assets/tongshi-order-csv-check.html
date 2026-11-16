@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-wap8sll7Ozmpbf85QBGfPQa56wDHkRFc75ezQ/6ioyY='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>订单 CSV 自查离线版｜同事AI</title>
+<meta name="description" content="在浏览器内免费检查订单 CSV 的重复编号、空编号和缺失金额，按源行导出异常清单。文件无需上传。">
+<link rel="canonical" href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check">
+<style>
+:root{color-scheme:light;--paper:#f6f5ef;--ink:#24372f;--pine:#153e36;--muted:#52635a;--line:#d9ded3;--white:#fffefa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Microsoft YaHei",sans-serif;line-height:1.65}
+main,header{width:min(100% - 36px,820px);margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+a{color:var(--pine);text-underline-offset:4px}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #407c60;outline-offset:3px}
+main{padding:34px 0 56px}h1{font-size:clamp(32px,6vw,48px);margin:0;line-height:1.2}h2{font-size:23px;margin:0 0 8px}p{margin:8px 0}
+.intro,.hint,#preview-note{color:var(--muted)}.panel{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:clamp(16px,4vw,28px);margin:20px 0}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}label{display:block;font-weight:650}input,button,select{font:inherit}input[type=file]{max-width:100%;margin-top:6px}
+button{border:1px solid var(--pine);border-radius:8px;padding:9px 14px;background:var(--pine);color:white;cursor:pointer;font-weight:650;min-height:44px}
+.quiet{color:var(--pine);background:transparent}.mapping{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.mapping select{width:100%;padding:8px;border:1px solid #778b80;border-radius:6px;background:white}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}.stats div{background:#eff2e9;border-radius:8px;padding:12px 8px}
+.stats dd{margin:0;font-size:24px;font-weight:700;color:var(--pine)}.stats dt{font-size:14px;color:var(--muted)}
+.result-table{overflow:auto;margin:12px 0}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th:first-child{width:95px}
+#status{min-height:1.65em}#status[data-error]{color:#90371d}[hidden]{display:none!important}
+@media(max-width:480px){.mapping{grid-template-columns:1fr}.stats div{padding:9px 6px}main{padding-top:28px}}
+</style>
+
+</head>
+<body>
+<header><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/" aria-label="同事AI 首页"><strong>同事AI</strong></a><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/guides/excel-order-check">订单核查指南</a></header>
+<main>
+<h1>订单 CSV 自查</h1>
+<p class="intro">找出同号记录、空订单编号和缺失金额，按源行下载异常清单。文件只在当前浏览器中处理。</p>
+<section class="panel" aria-labelledby="source-heading">
+<h2 id="source-heading">选择订单表</h2>
+<label for="source-file">CSV 文件</label>
+<input type="file" id="source-file" accept=".csv,text/csv" aria-describedby="file-hint">
+<p id="file-hint" class="hint">逗号分隔，首行为列名。最多 2,000 条记录、50 列、5 MB。Excel 工作簿可先将指定工作表另存为 CSV UTF-8。</p>
+<div class="row"><button id="sample" class="quiet" type="button">试用样表</button><button id="clear" class="quiet" type="button" hidden>清除文件和结果</button></div>
+<div id="check-controls" hidden>
+  <div class="mapping">
+    <label for="order-column">订单编号列 <select id="order-column"></select></label>
+    <label for="amount-column">订单金额列 <select id="amount-column"></select></label>
+  </div>
+  <button id="run-check" type="button">核查</button>
+</div>
+<p id="status" role="status"></p>
+<noscript>启用 JavaScript 后即可在本机读取文件和核查。</noscript>
+</section>
+<section id="results" class="panel" aria-labelledby="result-heading" hidden>
+<h2 id="result-heading" tabindex="-1">核查结果</h2>
+<dl class="stats">
+  <div><dt>数据行</dt><dd id="total-count"></dd></div>
+  <div><dt>待核对行</dt><dd id="issue-count"></dd></div>
+  <div><dt>同号记录</dt><dd id="duplicate-count"></dd></div>
+</dl>
+<p id="preview-note"></p>
+<div class="result-table" id="result-table"><table><thead><tr><th scope="col">源行</th><th scope="col">核查项</th></tr></thead><tbody id="findings"></tbody></table></div>
+<button id="download" class="quiet" type="button" hidden>下载异常清单 CSV</button>
+</section>
+<section class="panel" aria-labelledby="service-heading">
+<h2 id="service-heading">需要完整台账核查？</h2>
+<p>可提交脱敏样本，确认退款、订单状态及金额口径后，交付整理表、逐条异常清单和核查报告。两批服务 ¥299。</p>
+<p><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=csv-check#inquiry">联网提交核查需求</a></p>
+</section>
+</main>
+<script>
+'use strict';
+
+const controls = Object.fromEntries([
+  'source-file', 'sample', 'clear', 'check-controls', 'order-column', 'amount-column',
+  'run-check', 'status', 'results', 'result-heading', 'total-count', 'issue-count',
+  'duplicate-count', 'preview-note', 'result-table', 'findings', 'download',
+].map(id => [id, document.getElementById(id)]));
+const input = controls['source-file'];
+const orderColumn = controls['order-column'];
+const amountColumn = controls['amount-column'];
+const maxRecords = 2000;
+const maxColumns = 50;
+const maxBytes = 5000000;
+const previewLimit = 50;
+let selection = 0;
+let data = [];
+let issues = [];
+let sampleActive = false;
+
+function parseCsv(text) {
+  const normalized = text.replace(/\r\n?/g, '\n');
+  if (normalized.includes('\0')) throw new Error('文件包含无效字符。请将工作表另存为 CSV UTF-8。');
+  const rows = [];
+  let cells = [];
+  let field = '';
+  let mode = 'plain';
+  let line = 1;
+  let recordStart = 1;
+
+  function finishField() {
+    cells.push(field);
+    if (cells.length > maxColumns) throw new Error('每行最多支持 50 列。');
+    field = '';
+    mode = 'plain';
+  }
+
+  function finishRecord() {
+    finishField();
+    if (cells.length > 1 || cells[0].trim()) rows.push({ line: recordStart, cells });
+    if (rows.length > maxRecords + 1) throw new Error('最多支持 2,000 条数据记录。');
+    cells = [];
+  }
+
+  for (let index = 0; index < normalized.length; index += 1) {
+    const current = normalized[index];
+    if (mode === 'quoted') {
+      if (current === '"' && normalized[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else if (current === '"') {
+        mode = 'closed';
+      } else {
+        field += current;
+        if (current === '\n') line += 1;
+      }
+      continue;
+    }
+    if (current === ',') {
+      finishField();
+    } else if (current === '\n') {
+      finishRecord();
+      line += 1;
+      recordStart = line;
+    } else if (mode === 'closed' || (current === '"' && field.length)) {
+      throw new Error('第 ' + line + ' 行的引号格式无效。请重新导出 CSV。');
+    } else if (current === '"') {
+      mode = 'quoted';
+    } else {
+      field += current;
+    }
+  }
+  if (mode === 'quoted') throw new Error('第 ' + recordStart + ' 行有未闭合的引号。');
+  if (cells.length || field || mode === 'closed') finishRecord();
+  return rows;
+}
+
+function decodeCsv(bytes) {
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+  } catch {
+    try {
+      return new TextDecoder('gb18030', { fatal: true }).decode(bytes);
+    } catch {
+      throw new Error('无法读取这个文件的编码。请将工作表另存为 CSV UTF-8。');
+    }
+  }
+}
+
+function showStatus(message, isError = false) {
+  controls.status.textContent = message;
+  controls.status.toggleAttribute('data-error', isError);
+}
+
+function clearResults() {
+  issues = [];
+  controls.results.hidden = true;
+  controls.findings.replaceChildren();
+}
+
+function resetSelection() {
+  selection += 1;
+  data = [];
+  sampleActive = false;
+  orderColumn.replaceChildren();
+  amountColumn.replaceChildren();
+  controls['check-controls'].hidden = true;
+  controls.clear.hidden = true;
+  clearResults();
+  showStatus('');
+}
+
+function setColumnOptions(select, header, aliases) {
+  select.replaceChildren(new Option('请选择列', ''));
+  const guesses = [];
+  for (const [index, raw] of header.entries()) {
+    const label = raw.trim() || '未命名';
+    select.add(new Option((index + 1) + ' · ' + label, String(index)));
+    if (aliases.includes(label.toLowerCase().replace(/[\s_-]/g, ''))) guesses.push(index);
+  }
+  if (guesses.length === 1) select.value = String(guesses[0]);
+}
+
+function setData(text) {
+  const [header, ...records] = parseCsv(text);
+  if (!header || header.cells.length < 2) throw new Error('表头至少需要两列。请使用逗号分隔的 CSV。');
+  if (!records.length) throw new Error('CSV 只有表头，未读取到数据记录。');
+  const mismatch = records.find(row => row.cells.length !== header.cells.length);
+  if (mismatch) throw new Error('第 ' + mismatch.line + ' 行的列数与表头不同。');
+  setColumnOptions(orderColumn, header.cells,
+    ['订单号', '订单编号', '订单编码', '订单id', '交易单号', 'orderid', 'ordernumber']);
+  setColumnOptions(amountColumn, header.cells,
+    ['金额', '订单金额', '实付金额', '买家实付', '支付金额', '订单总额', 'amount', 'orderamount', 'ordertotal', 'paidamount', 'totalamount']);
+  data = records;
+  controls['check-controls'].hidden = false;
+  controls.clear.hidden = false;
+  showStatus('已读取 ' + records.length + ' 条数据。确认列后开始核查。');
+}
+
+function runCheck() {
+  clearResults();
+  if (orderColumn.value === '' || amountColumn.value === '' || orderColumn.value === amountColumn.value) {
+    showStatus('请选择不同的订单编号列和金额列。', true);
+    return;
+  }
+  const orderIndex = Number(orderColumn.value);
+  const amountIndex = Number(amountColumn.value);
+  const orders = new Map();
+  for (const { cells } of data) {
+    const order = cells[orderIndex].trim();
+    if (order) orders.set(order, (orders.get(order) ?? 0) + 1);
+  }
+  let duplicates = 0;
+  for (const { line, cells } of data) {
+    const order = cells[orderIndex].trim();
+    const reasons = [];
+    if (!order) reasons.push('订单编号缺失');
+    if (orders.get(order) > 1) {
+      reasons.push('订单编号重复');
+      duplicates += 1;
+    }
+    if (!cells[amountIndex].trim()) reasons.push('金额缺失');
+    if (reasons.length) issues.push({ line, reasons });
+  }
+  renderResults(duplicates);
+}
+
+function renderResults(duplicates) {
+  controls['result-heading'].textContent = sampleActive ? '样表核查结果' : '核查结果';
+  controls['total-count'].textContent = data.length;
+  controls['issue-count'].textContent = issues.length;
+  controls['duplicate-count'].textContent = duplicates;
+  for (const { line, reasons } of issues.slice(0, previewLimit)) {
+    const row = controls.findings.insertRow();
+    row.insertCell().textContent = line;
+    row.insertCell().textContent = reasons.join('、');
+  }
+  let note = '仅检查编号重复、空编号和空金额。';
+  if (!issues.length) note = '这三项检查均未发现异常。';
+  else if (issues.length > previewLimit) note = '页面显示前 50 条。下载清单可查看全部异常。';
+  controls['preview-note'].textContent = note;
+  controls['result-table'].hidden = issues.length === 0;
+  controls.download.hidden = issues.length === 0;
+  controls.results.hidden = false;
+  showStatus(sampleActive ? '样表核查完成。' : '核查完成。');
+  controls['result-heading'].focus();
+}
+
+input.addEventListener('change', async () => {
+  resetSelection();
+  const file = input.files[0];
+  if (!file) return;
+  controls.clear.hidden = false;
+  if (!/\.csv$/i.test(file.name)) {
+    showStatus('请选择 CSV 文件。', true);
+    return;
+  }
+  if (file.size > maxBytes) {
+    showStatus('文件超过 5 MB。', true);
+    return;
+  }
+  const current = selection;
+  try {
+    const bytes = await file.arrayBuffer();
+    if (selection === current) setData(decodeCsv(bytes));
+  } catch (error) {
+    if (selection === current) showStatus(error.message || '无法读取文件。', true);
+  }
+});
+
+controls.sample.addEventListener('click', () => {
+  input.value = '';
+  resetSelection();
+  setData('订单号,订单金额\nEXAMPLE-001,128.00\nEXAMPLE-002,\nEXAMPLE-003,48.00\nEXAMPLE-003,48.00');
+  sampleActive = true;
+  runCheck();
+});
+controls.clear.addEventListener('click', () => {
+  input.value = '';
+  resetSelection();
+  input.focus();
+});
+for (const column of [orderColumn, amountColumn]) {
+  column.addEventListener('change', () => {
+    clearResults();
+    showStatus('确认所选列后重新核查。');
+  });
+}
+controls['run-check'].addEventListener('click', runCheck);
+controls.download.addEventListener('click', () => {
+  const csv = ['源行,核查项', ...issues.map(({ line, reasons }) => line + ',' + reasons.join('、'))].join('\r\n');
+  const url = URL.createObjectURL(new Blob(['\uFEFF', csv, '\r\n'], { type: 'text/csv;charset=utf-8' }));
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = '订单核查异常清单.csv';
+  anchor.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+</script>
+</body>
+</html>
