@@ -12,7 +12,7 @@
 
 可在确认范围时选择 Excel 工作簿。以下样例由 4 条合成订单生成，包含可筛选的「订单整理」和「待核对」两张表，便于按原表行号复查。
 
-[下载 Excel 交付样例](https://raw.githubusercontent.com/Arron-byte/tongshi-order-csv-check/main/order-review-sample.xlsx)
+[下载 Excel 交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample/order-review.xlsx)
 
 如需按店铺的退款、金额和订单状态规则核查，可先提交脱敏样本。当前服务为 7 天内核查两批，价格 ¥299。[查看服务并提交需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#inquiry)
 
