@@ -12,6 +12,10 @@
 
 [下载单文件离线版](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check.html)，保存后双击打开，在浏览器里离线核查并下载异常清单。页面内有合成样表，也可联网打开正式接单页。
 
+## 自助核查 Excel 和退款状态
+
+订单台账核查技能可在本机按确认的字段、金额和退款规则运行，生成整理表、带源行号的异常清单及 HTML 报告。每批处理一个 CSV 或 Excel 可见表，最多 2,000 行。技能包含处理与核验脚本、规则模板和样表，需要 Python 3.12 或兼容版本。一次买断 ¥19.90。[查看技能包并下单](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit)
+
 ## 付费核查交付样例
 
 可在确认范围时选择 Excel 工作簿。以下样例由 4 条合成订单生成，包含可筛选的「订单整理」和「待核对」两张表，便于按原表行号复查。
