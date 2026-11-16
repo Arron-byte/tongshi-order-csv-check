@@ -4,7 +4,7 @@
 
 ## English quick start
 
-Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. The interface uses Chinese labels. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check.html)
+Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. The interface uses Chinese labels. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.1/tongshi-order-csv-check.html)
 
 The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit#english-buying-guide)
 
@@ -16,13 +16,13 @@ The local CSV/XLSX audit package adds configurable refund-status checks, a revie
 
 ## 离线自查
 
-[下载单文件离线版](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check.html)，保存后双击打开，在浏览器里离线核查并下载异常清单。页面内有合成样表，也可联网打开正式接单页。
+[下载单文件离线版](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.1/tongshi-order-csv-check.html)，保存后双击打开，在浏览器里离线核查并下载异常清单。需要核查 Excel 或退款状态时，可从页面联网打开 ¥19.90 技能买断入口。
 
 ## 在 Agent 中使用
 
 [技能说明](SKILL.md)和浏览器离线文件都在本仓库。也可下载 ZIP，解压后按包内说明打开工具。
 
-[下载订单 CSV 自查技能包](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check-v0.1.0.zip)
+[下载订单 CSV 自查技能包](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.1/tongshi-order-csv-check-v0.1.1.zip)
 
 ## 自助核查 Excel 和退款状态
 
