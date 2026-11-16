@@ -2,11 +2,15 @@
 
 [打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
 
-核对店铺导出的 CSV 订单表时，可以在浏览器里找出重复订单编号、缺失编号和缺失或无法识别的金额。文件在当前浏览器中处理，可下载带源行号的异常清单。
+核对店铺导出的 CSV 订单表时，可以在浏览器里找出重复订单编号、缺失编号和空金额。文件在当前浏览器中处理，可下载带源行号的异常清单。
 
 1. 用页面的「试用样表」体验，或选择带标题行、逗号分隔的 CSV 文件。Excel 工作簿可先将要核对的工作表另存为 CSV UTF-8。
 2. 选择订单编号列和订单金额列，点击「核查」。单次最多 2,000 条记录、50 列和 5 MB。
 3. 查看异常后点击「下载异常清单 CSV」。编号重复的每条记录会保留所在行，方便回原表逐项核对。
+
+## 离线自查
+
+[下载单文件离线版](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check.html)，保存后双击打开，在浏览器里离线核查并下载异常清单。页面内有合成样表，也可联网打开正式接单页。
 
 ## 付费核查交付样例
 
