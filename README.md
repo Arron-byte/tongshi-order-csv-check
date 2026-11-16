@@ -19,3 +19,5 @@
 ## 工具目录
 
 [![查看 NoLoginTools 审核进度](https://nologin.tools/badges/flat.svg)](https://nologin.tools/badge/sqtlow7jjmgjdgncr4fhmf7pki-srv-us-tools-order-csv-check "Verified by NoLoginTools.org")
+
+[一页工具](https://www.gitd.cn/)可查找其他免登录的文本处理和表格小工具。
