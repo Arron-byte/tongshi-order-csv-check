@@ -1,6 +1,6 @@
 # 同事AI 订单 CSV 自查
 
-[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
+[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥49 一次代查](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
 
 ## English quick start
 
@@ -34,7 +34,7 @@ The local CSV/XLSX audit package adds configurable refund-status checks, a revie
 
 [下载 Excel 交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample/order-review.xlsx?source=github-csv-guide)
 
-需要团队代查一份表时，可以先提交脱敏样本。一次代查 ¥49，接收一份 CSV 或一个可见 Excel 工作表，最多 500 行、20 列。材料、规则和到账确认后 24 小时内交付。[提交一次代查需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry)
+需要团队代查一份表时，可以先提交脱敏样本。一次代查 ¥49，接收一份 CSV 或一个可见 Excel 工作表，最多 500 行、20 列。材料、规则和到账确认后 24 小时内交付。
 
 需要在 7 天内按同一套规则核查两批时，可选 ¥299 的两批服务。[提交两批代查需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#inquiry)
 
