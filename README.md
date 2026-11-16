@@ -1,6 +1,6 @@
 # 同事AI 订单 CSV 自查
 
-[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
+[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
 
 核对店铺导出的 CSV 订单表时，可以在浏览器里找出重复订单编号、缺失编号和缺失或无法识别的金额。文件在当前浏览器中处理，可下载带源行号的异常清单。
 
@@ -12,7 +12,7 @@
 
 可在确认范围时选择 Excel 工作簿。以下样例由 4 条合成订单生成，包含可筛选的「订单整理」和「待核对」两张表，便于按原表行号复查。
 
-[下载 Excel 交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample/order-review.xlsx)
+[下载 Excel 交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample/order-review.xlsx?source=github-csv-guide)
 
 如需按店铺的退款、金额和订单状态规则核查，可先提交脱敏样本。当前服务为 7 天内核查两批，价格 ¥299。[查看服务并提交需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#inquiry)
 
