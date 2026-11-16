@@ -2,6 +2,12 @@
 
 [打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
 
+## English quick start
+
+Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. The interface uses Chinese labels. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.0/tongshi-order-csv-check.html)
+
+The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit#english-buying-guide)
+
 核对店铺导出的 CSV 订单表时，可以在浏览器里找出重复订单编号、缺失编号和空金额。文件在当前浏览器中处理，可下载带源行号的异常清单。
 
 1. 用页面的「试用样表」体验，或选择带标题行、逗号分隔的 CSV 文件。Excel 工作簿可先将要核对的工作表另存为 CSV UTF-8。
