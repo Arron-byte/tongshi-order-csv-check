@@ -4,6 +4,8 @@
 
 ¥49 核查一份店铺订单表，按确认的规则找出重复订单编号、缺失字段、金额或退款状态异常，交付带源行号的异常清单和核查报告。接收一份 CSV 或 Excel 的一个工作表，最多 500 行、20 列。样本、核查规则和到账确认后 24 小时内交付。
 
+只有订单编号和金额也可提交。确认金额口径和单一币种后，可以先做基础核查，报告会标明退款状态待核实。
+
 [提交一份脱敏订单表](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) · [查看交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#sample)
 
 [Medusa 商家订单导出核查样例](examples/medusa/) · [Spree 商品明细导出转订单核查样例](examples/spree/)
@@ -14,7 +16,7 @@
 
 Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check.html)
 
-A one-sheet order audit costs CNY 49, payable by Alipay. Send a redacted CSV or one visible Excel worksheet with up to 500 data rows and 20 columns, one order per row and one currency. You receive a cleaned table, an exception list with source row numbers and an audit report within 24 hours after we confirm the sample, audit rules and payment. [Request an audit (Chinese form)](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) or [view the Medusa example](examples/medusa/).
+A one-sheet order audit costs CNY 49, payable by Alipay. Send a redacted CSV or one visible Excel worksheet with up to 500 data rows and 20 columns, one order per row and one currency. With just order numbers and amounts, you can request a basic audit and have refund status marked unverified. You receive a cleaned table, an exception list with source row numbers and an audit report within 24 hours after we confirm the sample, audit rules and payment. [Request an audit (Chinese form)](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) or [view the Medusa example](examples/medusa/).
 
 The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#english-buying-guide)
 

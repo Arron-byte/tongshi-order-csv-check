@@ -4,7 +4,7 @@ Spree v6.0.5 writes one row per line item. The order number appears on every ite
 
 Prepare one order-level row per order from a private copy. In this exporter version, an adjacent row with the same number, item data, and blank order-level fields can be the next item. Use the original export to confirm that relationship. Keep ambiguous rows for review. Preserve rows with missing totals and keep any repeated **order-level** rows so the audit can flag them. In the review copy, keep `Number`, `Total`, and `Currency` and split the file by currency. Keep customer names, addresses, phones, emails, and notes in the private original. `Total` is the order total. Settlement and refund amounts need their own source records.
 
-The paid audit also requires an agreed refund-status column based on your refund records. Spree's order `Status` describes the order lifecycle. The prepared sample includes a separate synthetic `Refund Status` column for this reason. [Sample audit rules](rules.example.json)
+Spree's order `Status` describes the order lifecycle. Include a refund-status column from your refund records if you want that field checked. The prepared sample illustrates this with a separate synthetic `Refund Status` column. If you only have order numbers and amounts, ask for a basic audit and confirm the currency. The report will mark refund status unverified. [Sample audit rules](rules.example.json)
 
 ## Try the synthetic sample
 
