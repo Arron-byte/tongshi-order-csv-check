@@ -1,0 +1,7 @@
+Number,Status,Currency,Total,Product ID,Item SKU
+R100001,complete,USD,29.99,101,SKU-A
+R100001,,,,102,SKU-B
+R100002,complete,USD,19.50,103,SKU-C
+R100002,complete,USD,19.50,104,SKU-D
+R100003,complete,USD,,105,SKU-E
+,complete,USD,8.00,106,SKU-F

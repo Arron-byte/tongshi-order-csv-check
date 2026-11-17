@@ -1,0 +1,14 @@
+{
+  "columns": {
+    "order_id": "Number",
+    "amount": "Total",
+    "currency": "Currency",
+    "refund_status": "Refund Status"
+  },
+  "refund_status_map": {
+    "No Refund": "none"
+  },
+  "currency": "USD",
+  "encoding": "utf-8-sig",
+  "delimiter": ","
+}
