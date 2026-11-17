@@ -1,0 +1,7 @@
+Order_ID,Total,Payment Status,Currency Code
+ord_demo_100,120.00,captured,USD
+ord_demo_101,39.95,captured,USD
+ord_demo_101,39.95,captured,USD
+ord_demo_102,60.00,partially_refunded,USD
+ord_demo_103,,captured,USD
+ord_demo_104,20.00,captured,EUR

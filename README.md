@@ -6,6 +6,8 @@
 
 [提交一份脱敏订单表](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) · [查看交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#sample)
 
+[Medusa 商家订单导出核查样例](examples/medusa/)
+
 [打开免费自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase)
 
 ## English quick start

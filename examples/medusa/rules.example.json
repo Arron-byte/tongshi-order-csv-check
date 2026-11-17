@@ -1,0 +1,14 @@
+{
+  "columns": {
+    "order_id": "Order_ID",
+    "amount": "Total",
+    "refund_status": "Payment Status",
+    "currency": "Currency Code"
+  },
+  "refund_status_map": {
+    "captured": "none"
+  },
+  "currency": "USD",
+  "encoding": "utf-8-sig",
+  "delimiter": ","
+}
