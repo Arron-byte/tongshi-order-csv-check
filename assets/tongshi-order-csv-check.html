@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-wap8sll7Ozmpbf85QBGfPQa56wDHkRFc75ezQ/6ioyY='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KRp2jm5pKoO1zq5I/5KRbVTJ3ELiiVUsHdBBSfWRb6A='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>订单 CSV 自查离线版｜同事AI</title>
 <meta name="description" content="在浏览器内免费检查订单 CSV 的重复编号、空编号和缺失金额，按源行导出异常清单。文件无需上传。">
@@ -20,7 +20,7 @@ button{border:1px solid var(--pine);border-radius:8px;padding:9px 14px;backgroun
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}.stats div{background:#eff2e9;border-radius:8px;padding:12px 8px}
 .stats dd{margin:0;font-size:24px;font-weight:700;color:var(--pine)}.stats dt{font-size:14px;color:var(--muted)}
 .result-table{overflow:auto;margin:12px 0}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th:first-child{width:95px}
-#status{min-height:1.65em}#status[data-error]{color:#90371d}[hidden]{display:none!important}
+#status{min-height:1.65em}#status[data-error]{color:#90371d}#result-heading{scroll-margin-top:16px}[hidden]{display:none!important}
 @media(max-width:480px){.mapping{grid-template-columns:1fr}.stats div{padding:9px 6px}main{padding-top:28px}}
 </style>
 
@@ -35,6 +35,8 @@ button{border:1px solid var(--pine);border-radius:8px;padding:9px 14px;backgroun
 <label for="source-file">CSV 文件</label>
 <input type="file" id="source-file" accept=".csv,text/csv" aria-describedby="file-hint">
 <p id="file-hint" class="hint">逗号分隔，首行为列名。最多 2,000 条记录、50 列、5 MB。Excel 工作簿可先将指定工作表另存为 CSV UTF-8。</p>
+<p><a id="excel-buyout" href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=csv-check">联网购买 · 本机核查 Excel · ¥19.90 买断</a> <span class="hint">需 Python</span></p>
+<p><a id="once-service" href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&amp;source=csv-check#inquiry">团队代查 Excel 或 CSV · ¥49.00 / 次</a></p>
 <div class="row"><button id="sample" class="quiet" type="button">试用样表</button><button id="clear" class="quiet" type="button" hidden>清除文件和结果</button></div>
 <div id="check-controls" hidden>
   <div class="mapping">
@@ -54,14 +56,15 @@ button{border:1px solid var(--pine);border-radius:8px;padding:9px 14px;backgroun
   <div><dt>同号记录</dt><dd id="duplicate-count"></dd></div>
 </dl>
 <p id="preview-note"></p>
+<p><a id="result-once-service" href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&amp;source=csv-check#inquiry">团队代查并交付整理表 · ¥49.00 / 次</a> <span class="hint">核查退款和订单状态，先提交脱敏样本。</span></p>
+<p><a id="refund-buyout" href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=csv-check">联网购买 · 本机核查退款状态 · ¥19.90 买断</a></p>
 <div class="result-table" id="result-table"><table><thead><tr><th scope="col">源行</th><th scope="col">核查项</th></tr></thead><tbody id="findings"></tbody></table></div>
 <button id="download" class="quiet" type="button" hidden>下载异常清单 CSV</button>
 </section>
 <section class="panel" aria-labelledby="service-heading">
-<h2 id="service-heading">需要完整台账核查？</h2>
-<p>可提交脱敏样本，确认退款、订单状态及金额口径后，交付整理表、逐条异常清单和核查报告。两批服务 ¥299。</p>
-<p><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=csv-check#inquiry">联网提交核查需求</a></p>
-<p><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=csv-check">联网购买本地订单核查技能 ¥19.90</a></p>
+<h2 id="service-heading">需要连续核查两批订单表？</h2>
+<p>可提交脱敏样本，确认退款、订单状态及金额口径后，交付整理表、逐条异常清单和核查报告。</p>
+<p><a href="https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=csv-check#inquiry">两批代查 · ¥299</a></p>
 </section>
 </main>
 <script>
@@ -232,7 +235,8 @@ function runCheck() {
 }
 
 function renderResults(duplicates) {
-  controls['result-heading'].textContent = sampleActive ? '样表核查结果' : '核查结果';
+  const heading = controls['result-heading'];
+  heading.textContent = sampleActive ? '样表核查结果' : '核查结果';
   controls['total-count'].textContent = data.length;
   controls['issue-count'].textContent = issues.length;
   controls['duplicate-count'].textContent = duplicates;
@@ -249,7 +253,8 @@ function renderResults(duplicates) {
   controls.download.hidden = issues.length === 0;
   controls.results.hidden = false;
   showStatus(sampleActive ? '样表核查完成。' : '核查完成。');
-  controls['result-heading'].focus();
+  heading.focus({preventScroll: true});
+  heading.scrollIntoView({block: 'start'});
 }
 
 input.addEventListener('change', async () => {
