@@ -20,7 +20,13 @@ The local CSV/XLSX audit package adds configurable refund-status checks, a revie
 
 ## 在 Agent 中使用
 
-[技能说明](SKILL.md)和浏览器离线文件都在本仓库。也可下载 ZIP，解压后按包内说明打开工具。
+安装 Node.js 和 npm 后，在项目目录运行以下命令。
+
+```shell
+npx skills add Arron-byte/tongshi-order-csv-check --skill tongshi-order-csv-check --agent codex gemini-cli --copy
+```
+
+安装后，在浏览器打开 `.agents/skills/tongshi-order-csv-check/assets/tongshi-order-csv-check.html`。可在断网状态选表、核查并导出异常清单。用 Agent 解释结果时，可先查看[技能说明](SKILL.md)，再提供所需的脱敏异常清单。
 
 [下载订单 CSV 自查技能包](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check-v0.1.2.zip)
 
