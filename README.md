@@ -12,7 +12,9 @@
 
 ## English quick start
 
-Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. The Chinese-language results also link to a one-sheet review request for CNY 49. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check.html)
+Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check.html)
+
+A one-sheet order audit costs CNY 49, payable by Alipay. Send a redacted CSV or one visible Excel worksheet with up to 500 data rows and 20 columns, one order per row and one currency. You receive a cleaned table, an exception list with source row numbers and an audit report within 24 hours after we confirm the sample, audit rules and payment. [Request an audit (Chinese form)](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) or [view the Medusa example](examples/medusa/).
 
 The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#english-buying-guide)
 
