@@ -1,16 +1,16 @@
 # 同事AI 订单 CSV 自查
 
-[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥49 一次代查](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) · [下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
+[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase) · [¥49 一次代查](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry)
 
 ## English quick start
 
 Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. The Chinese-language results also link to a one-sheet review request for CNY 49. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check.html)
 
-The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit#english-buying-guide)
+The local CSV/XLSX audit package adds configurable refund-status checks, a review report and an independent verification script. It costs CNY 19.90 once and is payable by Alipay. [English buying guide and sample results](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#english-buying-guide)
 
 核对店铺导出的 CSV 订单表时，可以在浏览器里找出重复订单编号、缺失编号和空金额。文件在当前浏览器中处理，可下载带源行号的异常清单。
 
-1. 用页面的「试用样表」体验，或选择带标题行、逗号分隔的 CSV 文件。Excel 工作簿可先将要核对的工作表另存为 CSV UTF-8。
+1. 用页面的「试用样表」体验，或选择带标题行、逗号分隔的 CSV 文件。Excel 工作簿可先将要核对的工作表另存为 CSV UTF-8。[下载合成样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/sample.csv)
 2. 选择订单编号列和订单金额列，点击「核查」。单次最多 2,000 条记录、50 列和 5 MB。
 3. 查看异常后点击「下载异常清单 CSV」。编号重复的每条记录会保留所在行，方便回原表逐项核对。
 
