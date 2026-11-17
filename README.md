@@ -1,6 +1,12 @@
 # 同事AI 订单 CSV 自查
 
-[打开自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase) · [¥49 一次代查](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry)
+## 店铺订单表一次代查
+
+¥49 核查一份店铺订单表，按确认的规则找出重复订单编号、缺失字段、金额或退款状态异常，交付带源行号的异常清单和核查报告。接收一份 CSV 或 Excel 的一个工作表，最多 500 行、20 列。样本、核查规则和到账确认后 24 小时内交付。
+
+[提交一份脱敏订单表](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?service=order-audit-once-v1&source=github-csv-guide#inquiry) · [查看交付样例](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/?source=github-csv-guide#sample)
+
+[打开免费自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase)
 
 ## English quick start
 
