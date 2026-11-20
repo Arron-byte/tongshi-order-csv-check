@@ -1,0 +1,19 @@
+{
+  "label": "Proposed synthetic-demo Airtable schema; confirm against the customer's base before implementation",
+  "fields": [
+    { "airtable": "Gumroad Sale ID", "type": "singleLineText", "source": "id", "merge_key": true },
+    { "airtable": "Buyer Email", "type": "email", "source": "email" },
+    { "airtable": "Purchase Email Raw", "type": "singleLineText", "source": "purchase_email", "missing": null },
+    { "airtable": "Product ID", "type": "singleLineText", "source": "product_id" },
+    { "airtable": "Created At Raw", "type": "singleLineText", "source": "created_at", "rule": "Preserve the original timezone-bearing timestamp" },
+    { "airtable": "Transaction Time UTC", "type": "dateTime", "source": "created_at", "rule": "Validate calendar and explicit timezone; normalize to UTC; no guessed timezone" },
+    { "airtable": "Canonical Price USD Cents", "type": "number", "precision": 0, "source": "price", "rule": "Nonnegative safe integer; preserve zero; reject missing" },
+    { "airtable": "Canonical Price USD Text", "type": "singleLineText", "source": "price", "rule": "Exact two-decimal display from integer USD cents" },
+    { "airtable": "Sale Currency Raw", "type": "singleLineText", "source": "currency", "rule": "Separate sale denomination from canonical USD accounting price" },
+    { "airtable": "Partially Refunded", "type": "singleLineText", "source": "partially_refunded", "values": ["true", "false", "unknown"] },
+    { "airtable": "Can Contact", "type": "singleLineText", "source": "can_contact", "values": ["true", "false", "unknown"] },
+    { "airtable": "Buyer Presentment Raw JSON", "type": "multilineText", "source": "buyer_presentment", "missing": null },
+    { "airtable": "Buyer Charged Total Minor Units", "type": "number", "precision": 0, "source": "buyer_presentment.total_cents", "missing": null, "rule": "Retain integer units; e.g. JPY uses whole yen; no FX conversion" },
+    { "airtable": "Buyer Charged Currency", "type": "singleLineText", "source": "buyer_presentment.currency", "missing": null }
+  ]
+}

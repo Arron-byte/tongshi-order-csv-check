@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "description": "Local synthetic subset of the Gumroad GET /v2/sales response. No customer data.",
+  "success": true,
+  "sales": [
+    {
+      "id": "SYNTHETIC-SALE-001", "email": "buyer-a@example.test",
+      "purchase_email": "buyer-a@example.test", "product_id": "SYNTHETIC-PRODUCT-A",
+      "created_at": "2026-11-18T10:15:30Z", "price": 1234, "currency": "usd",
+      "partially_refunded": false, "can_contact": true
+    },
+    {
+      "id": "SYNTHETIC-SALE-002", "email": "buyer-a@example.test",
+      "purchase_email": "buyer-a@example.test", "product_id": "SYNTHETIC-PRODUCT-B",
+      "created_at": "2026-11-19T09:00:00+09:00", "price": 1000, "currency": "jpy",
+      "partially_refunded": true, "can_contact": false,
+      "buyer_presentment": { "currency": "jpy", "price_cents": 1441, "total_cents": 1441, "tip_cents": 0, "seller_tax_cents": 0, "gumroad_tax_cents": 0, "shipping_cents": 0, "fx_rate": "0.00694", "refunded_cents": 144 }
+    },
+    {
+      "id": "SYNTHETIC-SALE-001", "email": "buyer-a@example.test",
+      "purchase_email": "buyer-a@example.test", "product_id": "SYNTHETIC-PRODUCT-A",
+      "created_at": "2026-11-18T10:15:30Z", "price": 1234, "currency": "usd",
+      "partially_refunded": false, "can_contact": true
+    },
+    {
+      "id": "SYNTHETIC-SALE-003", "email": "buyer-b@example.test",
+      "product_id": "SYNTHETIC-PRODUCT-A", "created_at": "2026-11-19T02:00:00Z",
+      "price": 0, "currency": "usd"
+    }
+  ]
+}

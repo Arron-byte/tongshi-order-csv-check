@@ -1,0 +1,110 @@
+[
+  {
+    "method": "PATCH",
+    "url": "https://api.airtable.com/v0/{BASE_ID}/{TABLE_ID}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "authentication": "A base-scoped credential must be injected at runtime. This example contains none.",
+    "body": {
+      "performUpsert": {
+        "fieldsToMergeOn": [
+          "Gumroad Sale ID"
+        ]
+      },
+      "typecast": false,
+      "records": [
+        {
+          "fields": {
+            "Gumroad Sale ID": "SYNTHETIC-SALE-001",
+            "Buyer Email": "buyer-a@example.test",
+            "Purchase Email Raw": "buyer-a@example.test",
+            "Product ID": "SYNTHETIC-PRODUCT-A",
+            "Created At Raw": "2026-11-18T10:15:30Z",
+            "Transaction Time UTC": "2026-11-18T10:15:30.000Z",
+            "Canonical Price USD Cents": 1234,
+            "Canonical Price USD Text": "12.34",
+            "Sale Currency Raw": "usd",
+            "Partially Refunded": "false",
+            "Can Contact": "true",
+            "Buyer Presentment Raw JSON": null,
+            "Buyer Charged Total Minor Units": null,
+            "Buyer Charged Currency": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "method": "PATCH",
+    "url": "https://api.airtable.com/v0/{BASE_ID}/{TABLE_ID}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "authentication": "A base-scoped credential must be injected at runtime. This example contains none.",
+    "body": {
+      "performUpsert": {
+        "fieldsToMergeOn": [
+          "Gumroad Sale ID"
+        ]
+      },
+      "typecast": false,
+      "records": [
+        {
+          "fields": {
+            "Gumroad Sale ID": "SYNTHETIC-SALE-002",
+            "Buyer Email": "buyer-a@example.test",
+            "Purchase Email Raw": "buyer-a@example.test",
+            "Product ID": "SYNTHETIC-PRODUCT-B",
+            "Created At Raw": "2026-11-19T09:00:00+09:00",
+            "Transaction Time UTC": "2026-11-19T00:00:00.000Z",
+            "Canonical Price USD Cents": 1000,
+            "Canonical Price USD Text": "10.00",
+            "Sale Currency Raw": "jpy",
+            "Partially Refunded": "true",
+            "Can Contact": "false",
+            "Buyer Presentment Raw JSON": "{\"currency\":\"jpy\",\"price_cents\":1441,\"total_cents\":1441,\"tip_cents\":0,\"seller_tax_cents\":0,\"gumroad_tax_cents\":0,\"shipping_cents\":0,\"fx_rate\":\"0.00694\",\"refunded_cents\":144}",
+            "Buyer Charged Total Minor Units": 1441,
+            "Buyer Charged Currency": "jpy"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "method": "PATCH",
+    "url": "https://api.airtable.com/v0/{BASE_ID}/{TABLE_ID}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "authentication": "A base-scoped credential must be injected at runtime. This example contains none.",
+    "body": {
+      "performUpsert": {
+        "fieldsToMergeOn": [
+          "Gumroad Sale ID"
+        ]
+      },
+      "typecast": false,
+      "records": [
+        {
+          "fields": {
+            "Gumroad Sale ID": "SYNTHETIC-SALE-003",
+            "Buyer Email": "buyer-b@example.test",
+            "Purchase Email Raw": null,
+            "Product ID": "SYNTHETIC-PRODUCT-A",
+            "Created At Raw": "2026-11-19T02:00:00Z",
+            "Transaction Time UTC": "2026-11-19T02:00:00.000Z",
+            "Canonical Price USD Cents": 0,
+            "Canonical Price USD Text": "0.00",
+            "Sale Currency Raw": "usd",
+            "Partially Refunded": "unknown",
+            "Can Contact": "unknown",
+            "Buyer Presentment Raw JSON": null,
+            "Buyer Charged Total Minor Units": null,
+            "Buyer Charged Currency": null
+          }
+        }
+      ]
+    }
+  }
+]

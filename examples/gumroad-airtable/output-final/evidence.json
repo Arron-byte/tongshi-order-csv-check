@@ -1,0 +1,95 @@
+{
+  "label": "LOCAL SYNTHETIC DEMO — no live Gumroad/Airtable access or customer deployment",
+  "status": "PASS",
+  "node": "24.22.1",
+  "executed_at": "2026-11-20T06:55:51.401Z",
+  "input_sha256": "bb38931777c20b71c6595b53941744e4bf7f98d1893ecacee27ca8c31bce7e38",
+  "source_sha256": "5986c9317b6506d8ecc0ad4b57c058d01decab92276c529840662fb9ddeb58b7",
+  "source_rows": 4,
+  "unique_sale_ids": 3,
+  "duplicate_source_rows": 1,
+  "first_pass": [
+    {
+      "created": 1,
+      "updated": 0
+    },
+    {
+      "created": 1,
+      "updated": 0
+    },
+    {
+      "created": 1,
+      "updated": 0
+    }
+  ],
+  "second_pass": [
+    {
+      "created": 0,
+      "updated": 1
+    },
+    {
+      "created": 0,
+      "updated": 1
+    },
+    {
+      "created": 0,
+      "updated": 1
+    }
+  ],
+  "final_record_count": 3,
+  "network_attempts": 0,
+  "checks": [
+    {
+      "name": "4 source rows produce 3 sale IDs; one identical replay collapses",
+      "status": "PASS"
+    },
+    {
+      "name": "first pass creates 3; second creates 0 and updates 3; final count 3",
+      "status": "PASS"
+    },
+    {
+      "name": "same buyer with different sale IDs keeps both purchases",
+      "status": "PASS"
+    },
+    {
+      "name": "USD cents, sale currency and JPY buyer total remain separate",
+      "status": "PASS"
+    },
+    {
+      "name": "timezone is explicit; original offset retained and UTC computed",
+      "status": "PASS"
+    },
+    {
+      "name": "zero is preserved; absent, fractional and unsafe prices rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "missing optional facts remain unknown; contact false is retained",
+      "status": "PASS"
+    },
+    {
+      "name": "same source ID with conflicting snapshot blocks entire batch",
+      "status": "PASS"
+    },
+    {
+      "name": "multiple existing Airtable merge matches require repair",
+      "status": "PASS"
+    },
+    {
+      "name": "PATCH leaves unrelated follow-up notes intact",
+      "status": "PASS"
+    },
+    {
+      "name": "all source rows remain available in the original fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "no network operation attempted",
+      "status": "PASS"
+    }
+  ],
+  "artifact_sha256": {
+    "airtable-requests.json": "409637115a2cc1068bc9d3e9804829b14ca220723e93b5d9db2f53aafb8c8b33",
+    "local-records-after-replay.json": "897f4c1f16e0b013122d2b15c2ef697b9b0b14181840f267278f473ed2070296"
+  }
+}
