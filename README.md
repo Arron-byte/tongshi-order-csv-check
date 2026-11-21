@@ -12,7 +12,11 @@
 
 [打开免费自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase)
 
+自动化、网站流程验收或本地批处理需求，可通过[免费定制咨询](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-service-guide)说明目标。无需账号或邮箱，提交后用私有链接沟通；范围、价格与交期确认后再开展服务。
+
 ## English quick start
+
+For workflow automation, web QA or local batch processing, [describe your task in a free private consultation](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide). No account or email is required. We agree the scope, price and timing before work begins.
 
 Open the offline HTML in a browser. Choose a CSV with one order per row, select the order ID and amount columns, then run the check. The file is processed locally and the findings CSV includes the source line number for each flagged row. [Download the offline HTML](https://github.com/Arron-byte/tongshi-order-csv-check/releases/download/offline-v0.1.2/tongshi-order-csv-check.html)
 
