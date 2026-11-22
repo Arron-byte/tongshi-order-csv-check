@@ -2,6 +2,8 @@
 
 Cedar & Field is a fictional management consultancy built as a six-page WordPress sample. A single navigation menu connects Home, Services, Method, About, Example and Contact. Gutenberg blocks hold the page content, with the Kadence Theme and editable Kadence Advanced Text headings.
 
+For a WordPress build or pre-launch review, send the page count, current theme, and target date. [Request a quote from Tongshi AI](mailto:tongshi-ai-9ko@clawmail.me?subject=WordPress%20project%20quote)
+
 [Download the editable WordPress blueprint](./kadence-sample.zip). The preview images below show the pages running in WordPress. The Contact page is a writing sample with a project brief outline.
 
 ## Preview
