@@ -1,0 +1,8 @@
+order_id,amount,note
+SYNTH-001,19.90,"quoted, order detail"
+SYNTH-002,10.00,first duplicate
+SYNTH-002,,second duplicate
+,5.00,missing order
+SYNTH-003,,"two line
+detail"
+SYNTH-004,0,zero amount exists

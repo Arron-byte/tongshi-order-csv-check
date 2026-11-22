@@ -1,0 +1,238 @@
+{
+  "purpose": "Synthetic local browser QA for the Tongshi AI order CSV self-check",
+  "started_at": "2026-11-22T10:08:45.233Z",
+  "passed": true,
+  "versions": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "browser": "151.0.7922.34"
+  },
+  "source_sha256": {
+    "sites/tongshi-data-ops/worker/index.js": "9ccfb488c81ea59462af23db193a892638495a5d84cf8355ab43ef661f96bf52",
+    "sites/tongshi-data-ops/worker/ledger-check.js": "c8c6ebaa661b60e3416d9a2a258e334811ad7af10d2385a82912f75588f93ff8",
+    "sites/tongshi-data-ops/worker/ledger-check-script.js": "12a23a7fa9ee669c70dd77a7635f0ce46ee0cf52368f1b514a6d8d48413fae74"
+  },
+  "fixture_sha256": {
+    "orders.csv": "8c2bc19a5d5f8bfff26985240d156d89c321c5257c9b6ac07a6c15235a129fa5",
+    "unclosed-quote.csv": "ce6cf8799447760b6d4d09df3d484ea4a222f3db301890c7bee0342a8bea0ab8"
+  },
+  "checks": [
+    {
+      "id": "CSV-01",
+      "title": "Import and check a valid CSV",
+      "expected": "Detect the two columns, read six records, flag four records, and retain the correct source lines.",
+      "observed": {
+        "detected_columns": [
+          "order_id",
+          "amount"
+        ],
+        "records": 6,
+        "flagged_records": 4,
+        "duplicate_records": 2,
+        "source_line_findings": [
+          {
+            "source_line": 3,
+            "issues": [
+              "Duplicate order ID"
+            ]
+          },
+          {
+            "source_line": 4,
+            "issues": [
+              "Duplicate order ID",
+              "Missing amount"
+            ]
+          },
+          {
+            "source_line": 5,
+            "issues": [
+              "Missing order ID"
+            ]
+          },
+          {
+            "source_line": 6,
+            "issues": [
+              "Missing amount"
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "CSV-02",
+      "title": "Download the findings CSV",
+      "expected": "Download the exact four source-line findings using UTF-8 BOM and CRLF.",
+      "observed": {
+        "file": "02-desktop-findings.csv",
+        "suggested_filename": "订单核查异常清单.csv",
+        "bytes": 118,
+        "sha256": "92cde626ef6ff63efefe14472ddeb4fd0bee523b7b6da3323be409c73299b62e"
+      },
+      "passed": true
+    },
+    {
+      "id": "CSV-03",
+      "title": "Reject a malformed replacement file",
+      "expected": "Report the unclosed quote on line 2 and hide the old check results and download.",
+      "observed": {
+        "error_message": "Line 2 has an unclosed quote.",
+        "source_message": "第 2 行有未闭合的引号。",
+        "stale_export_visible": false
+      },
+      "passed": true
+    },
+    {
+      "id": "CSV-04",
+      "title": "Recover in the same tab after the failed import",
+      "expected": "Accept the corrected file without reloading and produce the same report and export bytes.",
+      "observed": {
+        "records": 6,
+        "flagged_records": 4,
+        "duplicate_records": 2,
+        "source_line_findings": [
+          {
+            "source_line": 3,
+            "issues": [
+              "Duplicate order ID"
+            ]
+          },
+          {
+            "source_line": 4,
+            "issues": [
+              "Duplicate order ID",
+              "Missing amount"
+            ]
+          },
+          {
+            "source_line": 5,
+            "issues": [
+              "Missing order ID"
+            ]
+          },
+          {
+            "source_line": 6,
+            "issues": [
+              "Missing amount"
+            ]
+          }
+        ],
+        "export": {
+          "file": "04-retest-findings.csv",
+          "suggested_filename": "订单核查异常清单.csv",
+          "bytes": 118,
+          "sha256": "92cde626ef6ff63efefe14472ddeb4fd0bee523b7b6da3323be409c73299b62e"
+        },
+        "matches_initial_export": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CSV-05",
+      "title": "Block using one column for both fields",
+      "expected": "Reject identical order and amount mappings while preserving controls for correction.",
+      "observed": {
+        "error_message": "Choose distinct order ID and amount columns.",
+        "source_message": "请选择不同的订单编号列和金额列。",
+        "correction_available": true
+      },
+      "passed": true
+    },
+    {
+      "id": "CSV-06",
+      "title": "Complete the import and export with mobile touch emulation",
+      "expected": "Open the file chooser with a tap, check and export by touch on a 390px screen, and match the desktop CSV.",
+      "observed": {
+        "viewport": {
+          "width": 390,
+          "scroll_width": 390,
+          "touch_points": 1
+        },
+        "records": 6,
+        "flagged_records": 4,
+        "duplicate_records": 2,
+        "source_line_findings": [
+          {
+            "source_line": 3,
+            "issues": [
+              "Duplicate order ID"
+            ]
+          },
+          {
+            "source_line": 4,
+            "issues": [
+              "Duplicate order ID",
+              "Missing amount"
+            ]
+          },
+          {
+            "source_line": 5,
+            "issues": [
+              "Missing order ID"
+            ]
+          },
+          {
+            "source_line": 6,
+            "issues": [
+              "Missing amount"
+            ]
+          }
+        ],
+        "export": {
+          "file": "06-mobile-findings.csv",
+          "suggested_filename": "订单核查异常清单.csv",
+          "bytes": 118,
+          "sha256": "92cde626ef6ff63efefe14472ddeb4fd0bee523b7b6da3323be409c73299b62e"
+        },
+        "matches_desktop_export": true
+      },
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "01-desktop-results.png",
+      "sha256": "e529b74ef5e1ec9eb92809130ee21e56a0384c3722b9d6163a211d4e3dc094f5"
+    },
+    {
+      "file": "03-malformed-file.png",
+      "sha256": "d31f61dbb2d409bf509ae5c65529f062e1dfc7f4aba1cab99c2f4ea9d6639f53"
+    },
+    {
+      "file": "04-retest-results.png",
+      "sha256": "ebf56cf10f08dadb7488fc0aecf03f838f9b0d0fc7c654d89dc37b25635eb55e"
+    },
+    {
+      "file": "06-mobile-results.png",
+      "sha256": "859a24836ced51378e2d75598d6ca88201f1620a2050e241e14357013c1dc6e7"
+    }
+  ],
+  "network": {
+    "external_attempts_blocked": [],
+    "loopback_requests": [
+      {
+        "method": "GET",
+        "path": "/tools/order-csv-check"
+      },
+      {
+        "method": "GET",
+        "path": "/tools/order-csv-check.js"
+      },
+      {
+        "method": "GET",
+        "path": "/tools/order-csv-check"
+      },
+      {
+        "method": "GET",
+        "path": "/tools/order-csv-check.js"
+      }
+    ]
+  },
+  "browser_errors": [],
+  "limitations": [
+    "The browser exercised the existing worker page and script on an isolated loopback server.",
+    "The order data was synthetic, and the mobile case used Chromium touch emulation.",
+    "Native file pickers, real devices, production deployment, third-party systems, and payment were outside scope."
+  ],
+  "completed_at": "2026-11-22T10:08:50.842Z"
+}
