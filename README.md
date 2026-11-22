@@ -14,6 +14,7 @@
 
 ## 付费试单
 
+- **WordPress 询盘收件验收，360 元。** 用合成数据检查一个表单在手机、平板和桌面的提交，从获授权的邮箱读回对应邮件和数量。确认测试环境和范围后 24 小时内交首份报告，含一次复测。[独立复跑样例](examples/wordpress-inquiry-qa/) · [提交表单验收需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-wordpress-inquiry)
 - **网页流程验收试单，360 元。** 在你授权的测试环境中检查一个流程和最多六项用例，交含截图与复现步骤的问题清单，并复验一项改动。范围和测试环境确认后，两个工作日内交首轮报告。[浏览器导入与导出验收报告](examples/browser-file-flow) · [上传失败恢复样例](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
 - **数据自动化试单，按范围报价。** 针对一个来源和一个目标，先用脱敏样例验证字段映射、重复记录、冲突和重跑结果，再确认实施范围。[销售数据流转的可复跑样例](examples/gumroad-airtable/)
 - **会议行动项整理试单，260 元。** 把最多 30 条已确认事项整理成任务表，核对重复、冲突、负责人和期限。交 CSV、源行清单和可复跑规则。[会议任务表样例和范围](examples/meeting-actions/)
@@ -26,6 +27,7 @@
 
 ## English quick start
 
+- **WordPress inquiry form QA, CNY 360.** We test one form on phone, tablet and desktop, verify receipt in the approved inbox, and retest one fix. The first report is due within 24 hours of confirming the scope and test environment. [See the independently reproduced sample](examples/wordpress-inquiry-qa/) · [Request a form check](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-wordpress-inquiry)
 - **Staging QA pilot, CNY 360.** We test one authorized workflow with up to six agreed cases, deliver screenshots and reproducible issue notes, and retest one fix. The first report is due within two business days of confirming the scope and test environment. [Browser import and export QA report](examples/browser-file-flow) · [Upload recovery sample](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
 - **Data automation pilot, priced by scope.** We verify the field mapping, duplicate records, conflicts and replay for one source and destination using a redacted example before agreeing on an implementation. [Reproduce the sales data workflow](examples/gumroad-airtable/)
 - **Meeting action list pilot, CNY 260.** We turn up to 30 approved action items into a task CSV and source-row review, with repeatable rules. [See the test fixture, results, and scope](examples/meeting-actions/)

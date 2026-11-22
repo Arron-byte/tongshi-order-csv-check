@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "title": "WordPress inquiry form acceptance sample",
+  "scope": "Fictional WordPress and Kadence site with synthetic entries and an isolated local SMTP inbox",
+  "independently_reproduced": true,
+  "pages": [
+    "Home",
+    "Services",
+    "Contact"
+  ],
+  "viewport_widths_px": [
+    390,
+    768,
+    1280
+  ],
+  "page_viewport_combinations_checked": 9,
+  "horizontal_overflow_observed": false,
+  "invalid_submission": {
+    "http_status": 422,
+    "messages_received": 0
+  },
+  "valid_submission": {
+    "http_status": 200,
+    "messages_received": 1,
+    "matching_message_verified": true
+  },
+  "screenshot": {
+    "file": "mobile-inquiry-accepted.png",
+    "viewport_width_px": 390,
+    "sha256": "e2ae189e3449ed9729f362fe35c6f340f26576180c62ad480cf307c57cd4a9cb"
+  }
+}
