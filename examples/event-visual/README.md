@@ -24,3 +24,9 @@
 ![PowerPoint 导出的开场页](presentation/opening.png)
 
 [议程页](presentation/agenda.png) · [讲者页](presentation/speaker.png)
+
+## PowerPoint 排版试单
+
+**320 元，最多四页。** 提供现有 PPTX 模板和单一目标语言的审核版文案。我们调整排版，检查字体替换、文字截断和版式偏移，交付可编辑 PPTX、审阅 PDF 和一次修改。材料与范围确认后两个工作日内交首稿。[说明页数与语言](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-dtp-pilot)
+
+**CNY 320 for up to four slides.** Send an existing PPTX template and approved copy in one target language. We check font substitution, clipping and layout shifts, then deliver an editable PPTX and review PDF with one revision. The first pass is due within two business days of confirming the brief and materials. [Describe your slide brief](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-dtp-pilot)

@@ -12,10 +12,11 @@
 
 [打开免费自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase)
 
-## 网页验收和数据自动化试单
+## 付费试单
 
 - **网页流程验收试单，360 元。** 在你授权的测试环境中检查一个流程和最多六项用例，交含截图与复现步骤的问题清单，并复验一项改动。范围和测试环境确认后，两个工作日内交首轮报告。[上传与失败恢复的可复跑样例](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
 - **数据自动化试单，按范围报价。** 针对一个来源和一个目标，先用脱敏样例验证字段映射、重复记录、冲突和重跑结果，再确认实施范围。[销售数据流转的可复跑样例](examples/gumroad-airtable/)
+- **PowerPoint 排版试单，320 元。** 按现有模板排版最多四页已审定文案，检查字体、溢出和版式，交可编辑 PPTX 和审阅 PDF，含一次修改。[演示模板和试单范围](examples/event-visual/#powerpoint-排版试单)
 
 在咨询页说明要验收的流程、已有工具和期望结果。无需账号或邮箱，提交后会取得私有沟通链接。双方确认范围、交期和支付宝结算安排后开工。[提交定制需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-service-guide)
 
@@ -25,6 +26,7 @@
 
 - **Staging QA pilot, CNY 360.** We test one authorized workflow with up to six agreed cases, deliver screenshots and reproducible issue notes, and retest one fix. The first report is due within two business days of confirming the scope and test environment. [Reproduce the upload recovery checks](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
 - **Data automation pilot, priced by scope.** We verify the field mapping, duplicate records, conflicts and replay for one source and destination using a redacted example before agreeing on an implementation. [Reproduce the sales data workflow](examples/gumroad-airtable/)
+- **PowerPoint layout pilot, CNY 320.** We fit approved copy into up to four slides in your existing template, check fonts and overflow, and deliver editable PPTX, a review PDF, and one revision. [See the slide portfolio and scope](examples/event-visual/#powerpoint-排版试单)
 
 Tell us which workflow you want checked, what tools it uses and what result you expect. The consultation needs no account or email and gives you a private link. We agree on the scope, timing and Alipay settlement before work begins. [Describe your task in English](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide)
 
