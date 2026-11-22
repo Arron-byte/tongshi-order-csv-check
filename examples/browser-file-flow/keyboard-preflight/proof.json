@@ -1,0 +1,196 @@
+{
+  "purpose": "Owned CSV checker: narrow keyboard and accessibility DOM preflight",
+  "started_at": "2026-11-22T10:26:53.823Z",
+  "passed": true,
+  "versions": {
+    "node": "v24.22.1",
+    "playwright": "1.62.1",
+    "chrome": "157.0.8103.79"
+  },
+  "source_sha256": {
+    "index.js": "9ccfb488c81ea59462af23db193a892638495a5d84cf8355ab43ef661f96bf52",
+    "ledger-check.js": "c8c6ebaa661b60e3416d9a2a258e334811ad7af10d2385a82912f75588f93ff8",
+    "ledger-check-script.js": "12a23a7fa9ee669c70dd77a7635f0ce46ee0cf52368f1b514a6d8d48413fae74"
+  },
+  "fixture_sha256": {
+    "valid": "8c2bc19a5d5f8bfff26985240d156d89c321c5257c9b6ac07a6c15235a129fa5",
+    "invalid": "ce6cf8799447760b6d4d09df3d484ea4a222f3db301890c7bee0342a8bea0ab8"
+  },
+  "observations": {
+    "initial_keyboard_order": [
+      {
+        "id": "",
+        "tag": "A",
+        "text": "同事AI",
+        "label": "同事AI 首页"
+      },
+      {
+        "id": "",
+        "tag": "A",
+        "text": "订单核查指南",
+        "label": null
+      },
+      {
+        "id": "source-file",
+        "tag": "INPUT",
+        "text": "",
+        "label": null
+      }
+    ],
+    "file_label": {
+      "get_by_label_matches": 1,
+      "dom": {
+        "labels": [
+          "CSV 文件"
+        ],
+        "described_by": "file-hint",
+        "description": "逗号分隔，首行为列名。最多 2,000 条记录、50 列、5 MB。Excel 工作簿可先将指定工作表另存为 CSV UTF-8。"
+      }
+    },
+    "file_focus": {
+      "id": "source-file",
+      "active": true,
+      "focus_visible": true,
+      "outline_style": "solid",
+      "outline_width": "3px",
+      "outline_color": "rgb(64, 124, 96)",
+      "outline_offset": "3px"
+    },
+    "mapping_labels": [
+      {
+        "id": "order-column",
+        "labels": [
+          "订单编号列"
+        ],
+        "value": "0"
+      },
+      {
+        "id": "amount-column",
+        "labels": [
+          "订单金额列"
+        ],
+        "value": "1"
+      }
+    ],
+    "loaded_keyboard_order": [
+      {
+        "id": "excel-buyout",
+        "tag": "A",
+        "text": "本机核查 Excel · ¥19.90 买断",
+        "label": null
+      },
+      {
+        "id": "once-service",
+        "tag": "A",
+        "text": "团队代查 Excel 或 CSV · ¥49.00 / 次",
+        "label": null
+      },
+      {
+        "id": "sample",
+        "tag": "BUTTON",
+        "text": "试用样表",
+        "label": null
+      },
+      {
+        "id": "clear",
+        "tag": "BUTTON",
+        "text": "清除文件和结果",
+        "label": null
+      },
+      {
+        "id": "order-column",
+        "tag": "SELECT",
+        "text": "请选择列1 · order_id2 · amount3 · note",
+        "label": null
+      },
+      {
+        "id": "amount-column",
+        "tag": "SELECT",
+        "text": "请选择列1 · order_id2 · amount3 · note",
+        "label": null
+      },
+      {
+        "id": "run-check",
+        "tag": "BUTTON",
+        "text": "核查",
+        "label": null
+      }
+    ],
+    "run_focus": {
+      "id": "run-check",
+      "active": true,
+      "focus_visible": true,
+      "outline_style": "solid",
+      "outline_width": "3px",
+      "outline_color": "rgb(64, 124, 96)",
+      "outline_offset": "3px"
+    },
+    "keyboard_run": {
+      "total": "6",
+      "flagged": "4",
+      "active_after": {
+        "id": "result-heading",
+        "tag": "H2",
+        "text": "核查结果",
+        "label": null
+      }
+    },
+    "invalid_file_status": {
+      "text": "第 2 行有未闭合的引号。",
+      "role": "status",
+      "aria_live": null,
+      "aria_atomic": null,
+      "data_error": true,
+      "active_id": "source-file",
+      "results_hidden": true,
+      "controls_hidden": true
+    },
+    "keyboard_recovery": {
+      "activation": "Space",
+      "total": "6",
+      "flagged": "4",
+      "status": "核查完成。",
+      "active_after": {
+        "id": "result-heading",
+        "tag": "H2",
+        "text": "核查结果",
+        "label": null
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "file": "01-keyboard-file-focus.png",
+      "sha256": "8a5f77859c5ebc9427d751377a8ecd3246008ec0a2cfc48596ee379b7dd6a8b8"
+    },
+    {
+      "file": "02-keyboard-run-focus.png",
+      "sha256": "44b15922092caf347afbd528edde4a1869337b292bd83485d0fcf0e1a95c9f8e"
+    },
+    {
+      "file": "03-invalid-file-status.png",
+      "sha256": "594d21fb1759480e4e35f1a03804a28ab47fadf6b1abb03d236ffee72aa1aa16"
+    }
+  ],
+  "loopback_requests": [
+    {
+      "method": "GET",
+      "path": "/tools/order-csv-check"
+    },
+    {
+      "method": "GET",
+      "path": "/tools/order-csv-check.js"
+    }
+  ],
+  "blocked_requests": [],
+  "browser_errors": [],
+  "limitations": [
+    "Synthetic local fixture only; no client or WordPress site tested.",
+    "Chromium keyboard automation and DOM/computed-style observations; screen-reader speech and assistive-technology behavior were not tested.",
+    "The native OS file chooser was not visually tested; its browser event was handled using synthetic files.",
+    "No WCAG conformance verdict, contrast audit, complete keyboard audit, real-device testing, or client delivery is claimed."
+  ],
+  "prior_harness_sha256": "eeb6329456d6085305a87077308e96f05d997c4c788b3ab488e0c2da9d700c38",
+  "csp": "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+  "completed_at": "2026-11-22T10:26:58.313Z"
+}
