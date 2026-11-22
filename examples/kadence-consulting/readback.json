@@ -1,0 +1,239 @@
+{
+  "at": "2026-11-22T04:44:19.349Z",
+  "scope": "local WordPress Playground with pinned Kadence theme/plugin; no buyer information",
+  "desktop": {
+    "title": "Good work.\nClear direction.",
+    "viewport": 1280,
+    "width": 1280,
+    "theme": true,
+    "postId": "4",
+    "rejectedElements": 0,
+    "heroColumns": true,
+    "heroStacked": false,
+    "distinctCardColumns": 3
+  },
+  "mobile": {
+    "title": "Good work.\nClear direction.",
+    "viewport": 390,
+    "width": 390,
+    "theme": true,
+    "postId": "4",
+    "rejectedElements": 0,
+    "heroColumns": false,
+    "heroStacked": true,
+    "distinctCardColumns": 1
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Services",
+      "url": "/services/"
+    },
+    {
+      "label": "Method",
+      "url": "/method/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Example",
+      "url": "/example/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "editor": [
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "kadence/advancedheading",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/buttons",
+      "valid": true
+    },
+    {
+      "name": "core/button",
+      "valid": true
+    },
+    {
+      "name": "core/button",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/heading",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/buttons",
+      "valid": true
+    },
+    {
+      "name": "core/button",
+      "valid": true
+    },
+    {
+      "name": "core/group",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    },
+    {
+      "name": "core/paragraph",
+      "valid": true
+    }
+  ],
+  "hashes": {
+    "blueprint.json": "e2d45f3436931a4496b3b74137584ee73a5c441417808ee2f35c2c368b3f339d",
+    "fixture.php": "67f499bb47fd39eba2923c54877807c69911661a2f70dc3e1583d13d739f5b7d",
+    "sample.css": "97d2128ad45f7caade86e703b3eb4e2aa6389a6a6a3f86a98712b2800d9bcef1"
+  }
+}
