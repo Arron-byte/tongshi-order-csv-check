@@ -1,0 +1,19 @@
+{
+  "sample": "Two-page fictional workshop record",
+  "source_pdf_pages": 2,
+  "microsoft_word_rendered_pages": 2,
+  "editable_native_tables": 2,
+  "independently_matched_table_cells": 36,
+  "normalized_text_checked_on_both_pages": true,
+  "same_footer_verified_on_both_pages": true,
+  "separate_edit_reopened": {
+    "table": "Received Items",
+    "row": "L-014",
+    "field": "Count",
+    "original": "12",
+    "edited": "13"
+  },
+  "source_pdf_sha256": "b1eef5225795ed54a9e5c75d02a6447d7764f3ddf29170a4509a63f8b74d175d",
+  "editable_docx_sha256": "928dca784679e29acb332ab8ed57912535ab5213fe4679a5def8503c62ec525c",
+  "visual_comparison": "Both pages were rendered in Microsoft Word 2010 and compared with the source PDF. Minor line and paragraph spacing differences remain."
+}
