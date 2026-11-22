@@ -18,6 +18,7 @@
 - **数据自动化试单，按范围报价。** 针对一个来源和一个目标，先用脱敏样例验证字段映射、重复记录、冲突和重跑结果，再确认实施范围。[销售数据流转的可复跑样例](examples/gumroad-airtable/)
 - **会议行动项整理试单，260 元。** 把最多 30 条已确认事项整理成任务表，核对重复、冲突、负责人和期限。交 CSV、源行清单和可复跑规则。[会议任务表样例和范围](examples/meeting-actions/)
 - **PowerPoint 排版试单，320 元。** 按现有模板排版最多四页已审定文案，检查字体、溢出和版式，交可编辑 PPTX 和审阅 PDF，含一次修改。[演示模板和试单范围](examples/event-visual/#powerpoint-排版试单)
+- **竖版短片试剪，260 元。** 用你提供的原素材和已确认文案剪一条 20–30 秒短片，交带字幕的 1080×1920 MP4，含一次修改。双方确认范围和支付宝结算安排并收到素材后，48 小时内交初稿。[观看样片](examples/vertical-editing/) · [提交试剪需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-vertical-editing)
 
 在咨询页说明要验收的流程、已有工具和期望结果。无需账号或邮箱，提交后会取得私有沟通链接。双方确认范围、交期和支付宝结算安排后开工。[提交定制需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-service-guide)
 
@@ -29,6 +30,7 @@
 - **Data automation pilot, priced by scope.** We verify the field mapping, duplicate records, conflicts and replay for one source and destination using a redacted example before agreeing on an implementation. [Reproduce the sales data workflow](examples/gumroad-airtable/)
 - **Meeting action list pilot, CNY 260.** We turn up to 30 approved action items into a task CSV and source-row review, with repeatable rules. [See the test fixture, results, and scope](examples/meeting-actions/)
 - **PowerPoint layout pilot, CNY 320.** We fit approved copy into up to four slides in your existing template, check fonts and overflow, and deliver editable PPTX, a review PDF, and one revision. [See the slide portfolio and scope](examples/event-visual/#powerpoint-排版试单)
+- **Vertical editing pilot, CNY 260.** We edit one 20–30 second clip from your footage and approved copy, deliver a captioned 1080 × 1920 MP4, and include one revision. The first cut is due within 48 hours after we agree on scope and Alipay settlement and receive the materials. [Watch the sample](examples/vertical-editing/) · [Request a trial edit](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-vertical-editing&locale=en)
 
 Tell us which workflow you want checked, what tools it uses and what result you expect. The consultation needs no account or email and gives you a private link. We agree on the scope, timing and Alipay settlement before work begins. [Describe your task in English](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide)
 
