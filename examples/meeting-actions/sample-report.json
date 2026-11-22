@@ -1,0 +1,84 @@
+{
+  "inputRows": 7,
+  "tasks": [
+    {
+      "sourceId": "M01-01",
+      "action": "复核发布排期",
+      "owner": "运营岗",
+      "due": "2026-11-25",
+      "sourceRows": [
+        1,
+        2
+      ]
+    },
+    {
+      "sourceId": "M01-03",
+      "action": "核对采购单状态",
+      "owner": "对账岗",
+      "due": "2026-11-27",
+      "sourceRows": [
+        5
+      ]
+    },
+    {
+      "sourceId": "M01-04",
+      "action": "核对采购单状态",
+      "owner": "对账岗",
+      "due": "2026-11-27",
+      "sourceRows": [
+        6
+      ]
+    }
+  ],
+  "duplicates": [
+    {
+      "sourceId": "M01-01",
+      "sourceRows": [
+        1,
+        2
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "sourceId": "M01-02",
+      "entries": [
+        {
+          "sourceRow": 3,
+          "task": {
+            "sourceId": "M01-02",
+            "action": "归档活动资料",
+            "owner": "交付岗",
+            "due": "2026-11-26"
+          }
+        },
+        {
+          "sourceRow": 4,
+          "task": {
+            "sourceId": "M01-02",
+            "action": "归档活动资料",
+            "owner": "商务岗",
+            "due": "2026-11-26"
+          }
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "task": {
+        "sourceId": "M01-05",
+        "action": "确认复盘时间",
+        "owner": "",
+        "due": ""
+      },
+      "sourceRows": [
+        7
+      ],
+      "missing": [
+        "owner",
+        "due"
+      ]
+    }
+  ]
+}
