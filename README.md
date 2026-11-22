@@ -12,13 +12,21 @@
 
 [打开免费自查工具](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/tools/order-csv-check?source=github-csv-guide) · [¥19.90 本机核查技能](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/skills/order-audit?source=github-csv-guide#purchase)
 
-自动化、网站流程验收或本地批处理需求，可通过[免费定制咨询](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-service-guide)说明目标。无需账号或邮箱，提交后用私有链接沟通；范围、价格与交期确认后再开展服务。
+## 网页验收和数据自动化试单
+
+- **网页流程验收试单，360 元。** 在你授权的测试环境中检查一个流程和最多六项用例，交含截图与复现步骤的问题清单，并复验一项改动。范围和测试环境确认后，两个工作日内交首轮报告。[上传与失败恢复的可复跑样例](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
+- **数据自动化试单，按范围报价。** 针对一个来源和一个目标，先用脱敏样例验证字段映射、重复记录、冲突和重跑结果，再确认实施范围。[销售数据流转的可复跑样例](examples/gumroad-airtable/)
+
+在咨询页说明要验收的流程、已有工具和期望结果。无需账号或邮箱，提交后会取得私有沟通链接。双方确认范围、交期和支付宝结算安排后开工。[提交定制需求](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?source=github-service-guide)
 
 也可以直接给项目组写信。说明需要核对的表、失败的步骤或希望自动化的工作即可，初次来信请用脱敏样例。[联系同事 AI 商务](mailto:tongshi-ai-9ko@clawmail.me)
 
 ## English quick start
 
-For workflow automation, web QA or local batch processing, [describe your task in a free private consultation](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide). No account or email is required. We agree the scope, price and timing before work begins.
+- **Staging QA pilot, CNY 360.** We test one authorized workflow with up to six agreed cases, deliver screenshots and reproducible issue notes, and retest one fix. The first report is due within two business days of confirming the scope and test environment. [Reproduce the upload recovery checks](https://github.com/Arron-byte/tongshi-order-csv-check/releases/tag/upload-proof-2026-11-20)
+- **Data automation pilot, priced by scope.** We verify the field mapping, duplicate records, conflicts and replay for one source and destination using a redacted example before agreeing on an implementation. [Reproduce the sales data workflow](examples/gumroad-airtable/)
+
+Tell us which workflow you want checked, what tools it uses and what result you expect. The consultation needs no account or email and gives you a private link. We agree on the scope, timing and Alipay settlement before work begins. [Describe your task in English](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide)
 
 You can also email the project team directly. Tell us which figures differ or which step fails, and use a redacted example if you include one. [Email Tongshi AI](mailto:tongshi-ai-9ko@clawmail.me)
 

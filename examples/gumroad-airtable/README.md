@@ -31,6 +31,8 @@ Confirm the actual base schema, email choice (`email` versus `purchase_email`), 
 
 Production work would add authenticated extraction, complete pagination, saved progress, serialized retries after uncertain responses, and destination readback. The [official Airtable rate-limit guidance](https://airtable.com/developers/web/api/rate-limits) must be applied to that transport. The sample does not resolve later changed snapshots by guessing which is newest; incremental date filters alone may miss later refund changes. Confirm one authorized source sale against one destination row, then repeat the sync and reconcile counts before accepting a live workflow.
 
+To request a paid pilot for your workflow, describe the source, destination and smallest useful outcome. Start with field names or a redacted example. The team will confirm the scope, price and Alipay settlement in the private consultation. [Describe a workflow](https://sqtlow7jjmgjdgncr4fhmf7pki.srv.us/consult?locale=en&source=github-service-guide)
+
 ## Safe sharing
 
 Share this directory only. It contains source, synthetic fixtures, proposed mapping, official source links and actual local evidence. Parent prospect files, form responses, account data and credentials are outside this sample and are not part of it. No customer outcomes, production reliability or prior client deployment are asserted.
