@@ -19,6 +19,8 @@
 
 同一套会务视觉延展成开场、议程和讲者三个英文页面。PowerPoint 中可从开场或讲者布局插入新页，议程页可以复制并编辑表格。两种布局已在 PowerPoint 2010 中插入、修改文字、保存并重新打开。[下载可编辑 PPTX](presentation/city-connections-editable-v1.pptx)
 
+[查看三页 PDF 作品集](presentation/tongshi-ai-presentation-portfolio.pdf)
+
 ![PowerPoint 导出的开场页](presentation/opening.png)
 
 [议程页](presentation/agenda.png) · [讲者页](presentation/speaker.png)
