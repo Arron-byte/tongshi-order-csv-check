@@ -1,0 +1,13 @@
+{
+  "weekStart": "2026-11-16",
+  "records": [
+    {"sourceId":"CRM-41","date":"2026-11-16","owner":"周晴","text":"与示例客户确认首批资料清单","status":"done","due":"2026-11-17"},
+    {"sourceId":"CRM-42","date":"2026-11-18","owner":"林清","text":"整理交付清单和测试环境信息","status":"working","due":"2026-11-26"},
+    {"sourceId":"CRM-42","date":"2026-11-18","owner":"林清","text":"整理交付清单和测试环境信息","status":"working","due":"2026-11-26"},
+    {"sourceId":"CRM-43","date":"2026-11-20","owner":"周晴","text":"核对试单文件的留存天数","status":"waiting_customer","due":"2026-11-24"},
+    {"sourceId":"CRM-43","date":"2026-11-20","owner":"林清","text":"核对试单文件的留存天数","status":"waiting_customer","due":"2026-11-24"},
+    {"sourceId":"CRM-44","date":"2026-11-21","owner":"","text":"安排一次交付复核","status":"working","due":"2026-11-23"},
+    {"sourceId":"CRM-45","date":"2026-11-23","owner":"周晴","text":"登记下一个周次的新线索","status":"done","due":"2026-11-23"},
+    {"sourceId":"CRM-46","date":"2026-11-22","owner":"林清","text":"确认下一批可提供的脱敏材料","status":"waiting_customer","due":"2026-11-25"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T01:48:24.010Z",
+  "scope": "synthetic local CRM records only",
+  "tests": {
+    "same_json_bytes": true,
+    "same_markdown_bytes": true,
+    "verified_original_record_numbers": true,
+    "quarantined_conflicts_and_missing_owner": true,
+    "respected_week_boundary": true
+  },
+  "result": {
+    "source_records": 8,
+    "report_entries": 3,
+    "duplicate_groups": 1,
+    "human_review_groups": 2,
+    "outside_week_rows": 1
+  },
+  "input_sha256": "ddf73bc77b0ecb16a5d0b30f29a61305e788d4bb6c91ef4ec5656fae6f7b5bfd",
+  "program_sha256": "8279b84e75b0b4a66535d0df9e67357d316d6719039b2aa4b25b9dfb63cdb11c",
+  "report_sha256": "41555ec99cfb17ec2b6320aa67530b3d813397541a4fb2969649834aaaaa1921",
+  "live_client_system_verified": false
+}
